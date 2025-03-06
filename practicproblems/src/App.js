@@ -10,11 +10,12 @@ import Eight from "./Eight";
 import Nine from "./Nine";
 import Ten from "./Ten";
 import Eleven from "./Eleven";
+import Twelve from "./Twelve";
 
 export default function App(){
   return(
     <div>
-      <One/> 
+      {/* <One/> 
       <Two/>
       <Three/>
       <Four/>
@@ -24,7 +25,8 @@ export default function App(){
       <Eight/>
       <Nine/>
       <Ten/>
-      <Eleven/>
+      <Eleven/> */}
+      <Twelve/>
     </div>
   )
 }

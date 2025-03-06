@@ -1,4 +1,4 @@
-//Basic authentication form with login and registration
+//Basic Authentication form with login and registration
 import React, { useState } from "react";
 
 export default function Twelve() {

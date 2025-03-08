@@ -12,17 +12,28 @@ export default function Thirteen(){
                 const longitude = position.coords.longitude;
 
                 fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}
-                    &appid={4c80b03d9b207ec358539d8c4ef7e9b4}`)
-                    .then((response) => response.json());
+                    &appid=4c80b03d9b207ec358539d8c4ef7e9b4`)
+                    .then((response) => response.json())
                     .then((data) => setWeather(data));
-
             })
         }
-    })
+    },[])
 
     return(
         <div>
+            {weather ? (
+                <div>
+                    <h2>Current Weather</h2>
+                    <p>Temperature:{weather?.main?.temp}</p>
+                    <p>Conditions:{weather?.weather[0]?.description}</p>
+                </div>
+            ) : (
+                <p>
+                    Loading.....
+                </p>
+            )
+            }
 
         </div>
-    )
+    );
 }

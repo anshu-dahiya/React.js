@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 export default function Thirteen(){
 
     const [weather, setWeather] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         if(navigator.geolocation){
@@ -12,24 +13,44 @@ export default function Thirteen(){
                 const longitude = position.coords.longitude;
 
                 fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}
-                    &appid=4c80b03d9b207ec358539d8c4ef7e9b4`)
-                    .then((response) => response.json())
-                    .then((data) => setWeather(data));
-            })
+                    &appid=4c80b03d9b207ec358539d8c4ef7e9b4&units=metric`)
+                    .then((response) => {
+                        if(!response.ok){
+                            console.error("Failed to fetch weather data:",response.status);
+                            return null;
+                        }
+                        return response.json()
+                    })
+                    .then((data) => {
+                        if(data){
+                            setWeather(data)
+                        }
+                        setLoading(false);
+                    })
+                    .catch((error) => {
+                        console.error("Error fetching weather data", error);
+                        setLoading(false);
+                    });
+                    
+            });
         }
     },[])
 
     return(
         <div>
-            {weather ? (
+            {loading ? (
+                <p>
+                Loading.....
+                </p>
+            ) : weather && weather.main ? (
                 <div>
                     <h2>Current Weather</h2>
-                    <p>Temperature:{weather?.main?.temp}</p>
-                    <p>Conditions:{weather?.weather[0]?.description}</p>
+                    <p>Temperature:{weather.main?.temp}°C</p>
+                    <p>Conditions:{weather.weather?.[0]?.description}</p>
                 </div>
             ) : (
                 <p>
-                    Loading.....
+                    Unable to fetch weather data.
                 </p>
             )
             }

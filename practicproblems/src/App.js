@@ -12,8 +12,12 @@ import Ten from "./Ten";
 import Eleven from "./Eleven";
 import Twelve from "./Twelve";
 import Thirteen from "./Thirteen";
+import Fourteen from "./Fourteen";
 
 export default function App(){
+
+  const items = ['item 1','item 2','item 3','Another item ','Another item 2',]
+
   return(
     <div>
       {/* <One/> 
@@ -28,7 +32,8 @@ export default function App(){
       <Ten/>
       <Eleven/> */}
       {/* <Twelve/> */}
-      <Thirteen/>
+      {/* <Thirteen/> */}
+      <Fourteen items={items}/>
     </div>
   )
 }

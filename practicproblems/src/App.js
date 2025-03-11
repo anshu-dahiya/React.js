@@ -13,6 +13,7 @@ import Eleven from "./Eleven";
 import Twelve from "./Twelve";
 import Thirteen from "./Thirteen";
 import Fourteen from "./Fourteen";
+import Fifteen from "./Fifteen";
 
 export default function App(){
 
@@ -33,7 +34,8 @@ export default function App(){
       <Eleven/> */}
       {/* <Twelve/> */}
       {/* <Thirteen/> */}
-      <Fourteen items={items}/>
+      {/* <Fourteen items={items}/> */}
+      <Fifteen items={items} itemsPerPage={2}/>
     </div>
   )
 }

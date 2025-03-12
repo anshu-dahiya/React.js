@@ -14,10 +14,11 @@ import Twelve from "./Twelve";
 import Thirteen from "./Thirteen";
 import Fourteen from "./Fourteen";
 import Fifteen from "./Fifteen";
+import Sixteen from "./Sixteen";
 
 export default function App(){
 
-  const items = ['item 1','item 2','item 3','Another item ','Another item 2',]
+  // const items = ['item 1','item 2','item 3','Another item ','Another item 2',]
 
   return(
     <div>
@@ -35,7 +36,8 @@ export default function App(){
       {/* <Twelve/> */}
       {/* <Thirteen/> */}
       {/* <Fourteen items={items}/> */}
-      <Fifteen items={items} itemsPerPage={2}/>
+      {/* <Fifteen items={items} itemsPerPage={2}/> */}
+      <Sixteen/>
     </div>
   )
 }

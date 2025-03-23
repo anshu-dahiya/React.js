@@ -19,6 +19,7 @@ import Seventeen from "./Seventeen";
 import { ThemeProvider } from "./ThemeContext";
 import Eighteen from "./Eighteen";
 import EighteenComp from "./EighteenComp";
+import Nineteen from "./Nineteen";
 
 export default function App(){
 
@@ -43,12 +44,13 @@ export default function App(){
       {/* <Fifteen items={items} itemsPerPage={2}/> */}
       {/* <Sixteen/> */}
       {/* <Seventeen/> */}
-      <ThemeProvider>
+      {/* <ThemeProvider>
         <div className="App">
           <Eighteen/>
           <EighteenComp/>
         </div>
-      </ThemeProvider>
+      </ThemeProvider> */}
+      <Nineteen/>
     </div>
   )
 }

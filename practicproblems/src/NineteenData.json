@@ -1,0 +1,22 @@
+[
+    { 
+      "image" : "https://m.media-amazon.com/images/I/51izGKpbXOL._SY679_.jpg",
+      "title" : "Nothing Phone 3A",
+      "price" : "1,200"
+    },
+    { 
+      "image" : "https://m.media-amazon.com/images/I/61EscGf8mYL._SX679_.jpg",
+      "title" : "IPhone 16 Plus",
+      "price" : "10,000"
+    },
+    { 
+      "image" : "https://m.media-amazon.com/images/I/41P2s-83N8L._SX300_SY300_QL70_FMwebp_.jpg",
+      "title" : "Redmi Note 14",
+      "price" : "700"
+    },
+    { 
+      "image" : "https://m.media-amazon.com/images/I/4140OGrNrgL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title" : "Samsung Galaxy A56",
+      "price" : "8,500"
+    }
+    ]

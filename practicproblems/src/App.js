@@ -20,6 +20,7 @@ import { ThemeProvider } from "./ThemeContext";
 import Eighteen from "./Eighteen";
 import EighteenComp from "./EighteenComp";
 import Nineteen from "./Nineteen";
+import Twenty from "./Twenty";
 
 export default function App(){
 
@@ -50,7 +51,8 @@ export default function App(){
           <EighteenComp/>
         </div>
       </ThemeProvider> */}
-      <Nineteen/>
+      {/* <Nineteen/> */}
+      <Twenty/>
     </div>
   )
 }

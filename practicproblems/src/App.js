@@ -21,6 +21,7 @@ import Eighteen from "./Eighteen";
 import EighteenComp from "./EighteenComp";
 import Nineteen from "./Nineteen";
 import Twenty from "./Twenty";
+import Fetch from "./Fetch";
 
 export default function App(){
 
@@ -52,7 +53,8 @@ export default function App(){
         </div>
       </ThemeProvider> */}
       {/* <Nineteen/> */}
-      <Twenty/>
+      {/* <Twenty/> */}
+      <Fetch/>
     </div>
   )
 }

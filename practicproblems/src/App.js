@@ -22,6 +22,7 @@ import EighteenComp from "./EighteenComp";
 import Nineteen from "./Nineteen";
 import Twenty from "./Twenty";
 import Fetch from "./Fetch";
+import MutipleReturn from "./MutipleReturn";
 
 export default function App(){
 
@@ -54,7 +55,8 @@ export default function App(){
       </ThemeProvider> */}
       {/* <Nineteen/> */}
       {/* <Twenty/> */}
-      <Fetch/>
+      {/* <Fetch/> */}
+      <MutipleReturn/>
     </div>
   )
 }

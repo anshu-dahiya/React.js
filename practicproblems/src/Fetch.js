@@ -1,3 +1,4 @@
+//Fetching API(by promise chain)
 import React, { useEffect, useState } from 'react'
 import { data } from 'react-router-dom';
 
@@ -27,9 +28,9 @@ const handleClick = () => {
             {
                 users.map(user => {
                     return <li key={user.id}>
-                        <a href={user.html_url}>
-                            {user.login}
-                          </a>                        
+                            <a href={user.html_url}>
+                                {user.login}
+                            </a>                        
                         </li>;
                 })
             }

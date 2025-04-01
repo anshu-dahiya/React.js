@@ -24,6 +24,7 @@ import Twenty from "./Twenty";
 import Fetch from "./Fetch";
 import MutipleReturn from "./MutipleReturn";
 import A from "./A";
+import UseReducerEx1 from "./UseReducerEx1";
 
 export default function App(){
 
@@ -47,7 +48,7 @@ export default function App(){
       {/* <Fourteen items={items}/> */}
       {/* <Fifteen items={items} itemsPerPage={2}/> */}
       {/* <Sixteen/> */}
-      {/* <Seventeen/> */}
+      {/* <Seventeencd/> */}
       {/* <ThemeProvider>
         <div className="App">
           <Eighteen/>
@@ -58,7 +59,8 @@ export default function App(){
       {/* <Twenty/> */}
       {/* <Fetch/> */}
       {/* <MutipleReturn/> */}
-      <A/>
+      {/* <A/> */}
+      <UseReducerEx1/>
     </div>
   )
 }

@@ -25,6 +25,7 @@ import Fetch from "./Fetch";
 import MutipleReturn from "./MutipleReturn";
 import A from "./A";
 import UseReducerEx1 from "./UseReducerEx1";
+import UseReducerEx2 from "./UseReducerEx2";
 
 export default function App(){
 
@@ -60,7 +61,8 @@ export default function App(){
       {/* <Fetch/> */}
       {/* <MutipleReturn/> */}
       {/* <A/> */}
-      <UseReducerEx1/>
+      {/* <UseReducerEx1/> */}
+      <UseReducerEx2/>
     </div>
   )
 }

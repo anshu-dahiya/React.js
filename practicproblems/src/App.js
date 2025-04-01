@@ -23,6 +23,7 @@ import Nineteen from "./Nineteen";
 import Twenty from "./Twenty";
 import Fetch from "./Fetch";
 import MutipleReturn from "./MutipleReturn";
+import A from "./A";
 
 export default function App(){
 
@@ -56,7 +57,8 @@ export default function App(){
       {/* <Nineteen/> */}
       {/* <Twenty/> */}
       {/* <Fetch/> */}
-      <MutipleReturn/>
+      {/* <MutipleReturn/> */}
+      <A/>
     </div>
   )
 }

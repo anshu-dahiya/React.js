@@ -26,6 +26,7 @@ import MutipleReturn from "./MutipleReturn";
 import A from "./A";
 import UseReducerEx1 from "./UseReducerEx1";
 import UseReducerEx2 from "./UseReducerEx2";
+import FormValidation from "./FormValidation";
 
 export default function App(){
 
@@ -62,7 +63,8 @@ export default function App(){
       {/* <MutipleReturn/> */}
       {/* <A/> */}
       {/* <UseReducerEx1/> */}
-      <UseReducerEx2/>
+      {/* <UseReducerEx2/> */}
+      <FormValidation/>
     </div>
   )
 }

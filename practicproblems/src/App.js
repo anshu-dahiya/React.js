@@ -27,6 +27,7 @@ import A from "./A";
 import UseReducerEx1 from "./UseReducerEx1";
 import UseReducerEx2 from "./UseReducerEx2";
 import FormValidation from "./FormValidation";
+import useFormEx from "./useFormEx";
 
 export default function App(){
 
@@ -64,7 +65,8 @@ export default function App(){
       {/* <A/> */}
       {/* <UseReducerEx1/> */}
       {/* <UseReducerEx2/> */}
-      <FormValidation/>
+      {/* <FormValidation/> */}
+      <useFormEx/>
     </div>
   )
 }

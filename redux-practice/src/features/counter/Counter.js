@@ -1,52 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { 
   increment, 
   decrement, 
   incrementByAmount, 
-  decrementByAmount } from "./counterSlice";
+  decrementByAmount,
+  incrementAsync } from "./counterSlice";
+import './Counter.css'
 
 export function Counter(){
-    const count = useSelector((state) => state.counter.value)
-    const dispatch = useDispatch()
+    const count = useSelector((state) => state.counter.value);
+    const dispatch = useDispatch();
+    const [ incrementAmount, setIncrementAmount ] = useState('2')
 
     return (
         <div>
-          <div>
-            <span style={{ paddingLeft:'70px'}}>
-              {count}
-            </span>
-            <br/>
+          <div className="raw">
             <button
+              className="button"
               aria-label="Increment value"
               onClick={() => dispatch(increment())}
             >
-              Increment
+              +
             </button>
             
+            <span >
+              {count}
+            </span>
+
             <button
+              className="button"
               aria-label="Decrement value"
               onClick={() => dispatch(decrement())}
             >
-              Decrement
+              -
             </button>
 
             <br/>
 
+            <input
+              value={incrementAmount}
+              onChange={e => setIncrementAmount(e.target.value)}
+            />
+
             <button
-              aria-label="Increment value by 3"
-              onClick={() => dispatch(incrementByAmount(3))}
+              className="button"
+              aria-label="Increment value by Input"
+              onClick={() => dispatch(incrementByAmount(Number(incrementAmount)))}
             >
-              Increment value by 3
+              Add Amount
             </button>
 
             <br/>
 
             <button
-              aria-label="Increment value by 3"
+              className="button"
+              aria-label="Decrement value by Input"
               onClick={() => dispatch(decrementByAmount(3))}
             >
-              Decrement value by 3
+              Deduct Amount
+            </button>
+            <br/>
+
+            <button
+              className="button"
+              onClick={() => dispatch(incrementAsync(Number(incrementAmount)))}
+            >
+              Add Async
             </button>
 
           </div>

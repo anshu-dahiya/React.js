@@ -22,12 +22,17 @@ export const counterSlice = createSlice({
         }
     }
 })
-
 export const incrementAsync = (amount) => (disapatch) => {
     setTimeout(() => {
         disapatch(incrementByAmount(amount));
     },1000)
 }
+export const decrementAsync = (amount) => (disapatch) => {
+    setTimeout(() => {
+        disapatch(decrementByAmount(amount));
+    },1000)
+}
+
 
 export const { 
     increment, 

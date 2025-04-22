@@ -11,7 +11,8 @@ export default function App() {
     error,
     isLoading,
     isSuccess,
-    isFetching} = useGetApiByNameQuery();
+    isFetching,
+    refetch} = useGetApiByNameQuery();
 
   return (
     <div>
@@ -31,13 +32,13 @@ export default function App() {
         </div>
       )}
 
-      <ChangePost/>
+      <ChangePost refetch={refetch}/>
 
     </div>
   )
 }
 
-export const ChangePost = () => {
+export const ChangePost = ({refetch}) => {
   const [addPost] = useCreatePostMutation();
   const [deletePost] = useDeletePostMutation();
   const [updatePost] = useUpdatePostMutation();
@@ -70,14 +71,17 @@ export const ChangePost = () => {
     for(let post of posts) {
       await addPost(post);
     }
+    refetch();
   }
    
   const handleDelete = async() => {
-    await deletePost(2);
+    await deletePost(4);
+    refetch();
   }
   
   const handleUpdate = async() => {
     await updatePost(postUpdate);
+    refetch();
   }
 
   return(
